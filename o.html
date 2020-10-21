@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p id="name"></p>
+        <script>
+            var nm=["arun","sasi"];
+            document.getElementById("name").innerHTML=nm[0];
+            function showmessage (){
+            var message  = document.getElementById("message").value;
+            console.log(message)
+            display_message.innerHTML=message;
+        </script>
+        <form>
+            Enter 1: <input type="text" id="message">
+              
+            <input type="button" onclick="showmessage()" value="submit"/>
+           
+        </form>
+        <p> message is : <span id = "display_message"></span></p>
+        </form>
+    </body>
+</html>

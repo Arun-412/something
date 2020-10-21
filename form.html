@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function display() {
+            var name = document.getElementById("name").value;          
+            var location = document.getElementById("location").value;
+            var result = name + ' ' + location;
+            document.getElementById('show').textContent = result;
+           }  
+</script>
+</head>
+<body>
+
+<form onsubmit="return result();"method="post" action="data.html">
+<p id="name" /> name </p>
+<input type="text" / ></input>
+
+<p id="location"> contact location</p>
+
+<input type="text" ></input>
+<p id="insurance">with insurance</p>
+<input type="radio" id="yes" name="option" value="yes">
+<label for="yes">yes</label>
+<input type="radio" id="no" name="option" value="no">
+<label for="no">no</label>
+<p id="mobile">mobile</p>
+<input type="mobile" ></input>
+<p id="email">email</p>
+<input type="email" id="email" ></input>
+<p id="brand">brand</p>
+<select name="0">
+<option value="select">select</option>
+<option>yamaha</option>
+<option>ktm</option>
+<option>bajaj</option>
+<option>hero</option>
+<p id="wanted">wanted</p>
+<input type="checkbox">water wash</input>
+<input type="checkbox">oil change</input>
+<input type="checkbox">milage checkup</input>
+<input type="checkbox">battery charging</input>
+<button onclick="display()">submit</button><br />
+<button onclick=>display</button>
+<span id="show">
+</span>
+</form>
+
+
+</body>
+</html>
