@@ -4,9 +4,24 @@
 	<title >service point</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-        div{
+        table, th, td {
+  border: 7px solid black;
+  border-collapse: collapse;
+  height:10px;
+  width:150px;
+}
+th, td {
+  padding: 40px;
+}
+.center {
+  margin: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ 
+}
             
-        }
+        
         body {
           background-image: url('5.png');
           background-repeat: no-repeat;
@@ -14,7 +29,9 @@
           background-size: cover;
 
         }
-      
+      .button{
+		  align
+	  }
        
         </style>
 	
@@ -27,13 +44,7 @@
 
 	
 		<table border="5" style=background-color:rgb(104, 98, 167)>
-           <style>div{
-  margin-top:150px;
-  margin-bottom:200px;
-  margin-right:250px;
-  margin-left: 200px;
-  height: 200px
-  widows: 300px;}
+          
  
         </style><thead>
 				<tr>
@@ -82,8 +93,10 @@
 			</tbody >
 		</table>
 
-		<table border="5" id="show" align=right style=height:200px >
-			<input type="button"  onclick="AddRow()" value="display">
+		<table border="5" id="show" align=right >
+			<div class="center">
+				<button onclick="AddRow()" >display</button>
+			  </div>
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -147,6 +160,7 @@
 
 			n++;
 			x++;
+			console.log(list1;
 		}
 
 	</script>
