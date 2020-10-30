@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    
+</head>
+<body>
+     str 1<input type="text" id="s1" ></input>
+     str 2<input type="text" id="s2"></input>
+    str 4<input type="text" id="s4"> </input>
+  
+    <input type="button" onclick="k()" value="ok"> 
+    <p id="demo"></p>
+    <p id="o"></p>
+<p id="q"></p>
+<p id="r"></p>
+<p id="s"></p>
+<p id="t"></p>
+<p id="u"></p>
+<p id="v"></p>
+<p>  i="
+    <script>
+    
+       
+ 
+    function k(){
+     var is1= document.getElementById("s1").value;
+     document.getElementById("q").innerHTML=is1;
+     var ss1=is1.charAt(0);
+   
+     var ss01=is1.length;
+    document.getElementById("o").innerHTML=ss1;
+    
+     document.getElementById("r").innerHTML=ss01;
+     console.log(is1);
+                var is2= document.getElementById("s2").value;
+                document.getElementById("s").innerHTML=is2;
+                var ss2=is2.charAt(0);
+                var ss02=is2.length;
+                document.getElementById("s").innerHTML=ss2;
+                 document.getElementById("t").innerHTML=ss02;
+                console.log(is2);
+  var is3= document.getElementById("s4").value;
+  document.getElementById("u").innerHTML=is3;
+  var ss3=is3.charAt(0);
+  var ss03=is3.length;
+  document.getElementById("u").innerHTML=ss3;
+  document.getElementById("v").innerHTML=ss03;
+  console.log(is3);
+               
+    }
+  
+        </script>
+</body>
+</html>
