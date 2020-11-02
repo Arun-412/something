@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="syle.css">
+    <style>
+        table, th, td {
+            background : src="bubble.png";     
+  border: 2px solid lightskyblue;
+  border-collapse: collapse;
+  height:20px;
+  width:30px;
+}
+th, td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+    
+        <div class="form">
+        <div class="navbar">
+        
+    <div class="bubbles">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+    </div> 
+    </div>
+    </div>  
+    <form class="box" color="white" >
+        <input type="text" placeholder="name" id="name"><br>
+        <input type="text"placeholder="Location" id="location"><br>
+        <input type="email" placeholder="Email" id="email"><br>
+        <input type="tel" placeholder="Mobile Number" id="mobile number" required><br>
+    <table class="table"  id="show" >
+    
+        <button type="button" onclick="AddRow()" >display</button><br>
+    
+    <thead>
+        <tr>
+            <th>Name</th>
+       
+            <th>Location</th></form>
+           <th>Email</th>
+           <th>mobile number</th>
+        </tr>
+    </thead>
+</table>
+<script>
+
+    var list1 = [];
+    var list2 = [];
+    var list3 = [];
+    var list4 = [];
+    
+    
+    var n = 1;
+    var x = 0;
+    
+    function AddRow(){
+    
+        var AddRown = document.getElementById('show');
+        var NewRow = AddRown.insertRow(n);
+    
+        list1[x] = document.getElementById("name").value;
+        list2[x] = document.getElementById("location").value;
+        list3[x] = document.getElementById("email").value;
+        list4[x] = document.getElementById("mobile number").value;
+        var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+    
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = list4[x];
+    
+    n++;
+    x++;
+    console.log(list1);
+    console.log(show);
+    
+    }
+    
+    </script>
+</body>
+</html>
