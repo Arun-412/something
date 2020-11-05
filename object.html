@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+name <input type="text" id="my" >
+mobile <input type="number" id="my1" >
+email <input type="email" id="my2" >
+
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+
+<p id="d"></p>
+
+<script>
+function myFunction() {
+
+  var x = document.getElementById("my").value;
+  document.getElementById("d").innerHTML = x;
+  console.log(x);
+  var y = document.getElementById("my1").value;
+  document.getElementById("d").innerHTML = x;
+  console.log(x);
+  var z = document.getElementById("my2").value;
+  document.getElementById("d").innerHTML = x;
+  
+var r={name:x,mobile:y,email:z};
+console.log(r)
+
+
+}</script>
+
+</body>
+</html>
