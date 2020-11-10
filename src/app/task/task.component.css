@@ -1,0 +1,46 @@
+*{
+    list-style: circle;
+    lighting-color: darkolivegreen;
+    table-layout: auto;
+    text-decoration-line: inherit;    
+    text-align: center;
+    margin: 7px;
+padding: 5px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: solid skyblue;
+}
+.login{
+    border: 3px dashed lightgreen;
+    left: 100px;
+    right:100px;
+}
+.br
+{
+    border:4px solid rgb(125, 161, 141);
+    width: 340px; 
+    height:620px;
+    
+}
+text{
+    align-content: space-between;
+    margin-left: 100px;
+    padding: 10px;
+}
+button
+{
+    touch-action: pinch-zoom;
+    color:black;
+    padding: 10px 10px;
+    background: transparent;
+    border: 1px solid blue;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+ form
+{
+    align-items:center;
+    border-radius: 40px;
+    box-shadow: 50px;
+    left: 100px;
+} 
