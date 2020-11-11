@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DateService } from '../date.service';
 
 @Component({
   selector: 'app-cse',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CseComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dateservice:DateService) { }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,9 @@ import { DisplayComponent } from './display/display.component';
 import { FrontComponent } from './front/front.component';
 import { DeptModule } from './dept/dept.module';
 import { RestModule } from './rest/rest.module';
+import { DateService } from './date.service';
+import { HttpClientModule } from '@angular/common/http';
+
 const routes: Routes = [
   { path: '', redirectTo:'front' ,pathMatch:"full" },
     { path: 'front', component: FrontComponent },
@@ -27,11 +30,14 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule,
     RouterModule.forRoot(routes),
   ],
   exports:[RouterModule],
-  providers: [],
+  providers: [DateService],
   bootstrap: [AppComponent]
+
+  
 })
 export class AppModule { }
