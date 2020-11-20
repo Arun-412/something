@@ -10,8 +10,8 @@ import { DateService } from '../date.service';
 export class ItComponent implements OnInit {
 
 constructor(public service:DateService){}
-ddisplaythelist=[];
-
+ddisplaythelist:any=[];
+clr;
   ngOnInit(): void {
    this.listapicall()
   }
@@ -24,6 +24,9 @@ ddisplaythelist=[];
       }
     console.log(this.ddisplaythelist);
     })
+  }
+  clear(array_id){
+    this.service.delete(array_id).subscribe(res=>{})
   }
 }
   
