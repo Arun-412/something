@@ -7,16 +7,10 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
  export class AppComponent implements OnInit{
-  
-  constructor ( public date:DateService){}
-  
-  fun()
-  {
-    this.date.load().((res)=>{
-      var d="this is your date"
-    })
-  }
-
+constructor(public dateservice:DateService)
+{}  
   ngOnInit() {
-   } 
+  
+  
+} 
  } 

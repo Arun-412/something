@@ -1,2 +1,36 @@
-<!-- <router-outlet></router-outlet>
-<p>it works!</p> -->
+<router-outlet></router-outlet>
+<div><h3>Details About Your Data!!</h3>
+<!-- <button type="button" routerLink="/cse" (click)="start()">create</button> -->
+<table class ="design">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr></thead>
+    <div *ngFor="let array of ddisplaythelist">
+        <p >{{array.Reg_No}}</p>
+        <p *ngIf="array.college">{{array.college.department}}</p>
+        <p *ngIf="array.college">{{array.college.name}}</p>
+        <div *ngFor="let stu of array.student">
+        <p *ngIf="stu">{{stu.DOB}}</p>
+        <p *ngIf="stu">{{stu.FirstName}}</p>
+        <p *ngIf="stu">{{stu.LastName}}</p>
+       
+    </div>  </div>
+    <tbody><tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+<td>
+    <!-- <button type="button" routerLink="/cse" (click)="update()">edit</button> -->
+<!-- <button type="button" routerLink="/display" (click)="show()">view</button> -->
+
+<!-- <button type="button" (click)="clear()" > delete</button> -->
+</td>
+    </tr></tbody>
+</table>
+</div>
+<a routerLink="/front">logout</a>

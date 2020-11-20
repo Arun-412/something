@@ -11,6 +11,7 @@ import { DeptModule } from './dept/dept.module';
 import { RestModule } from './rest/rest.module';
 import { DateService } from './date.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: '', redirectTo:'front' ,pathMatch:"full" },
@@ -29,6 +30,7 @@ const routes: Routes = [
      AppComponent, TaskComponent, CseComponent, ItComponent, DisplayComponent,FrontComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     RouterModule,
@@ -40,4 +42,6 @@ const routes: Routes = [
 
   
 })
-export class AppModule { }
+export class AppModule {
+  
+ }
