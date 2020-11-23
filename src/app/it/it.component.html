@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 <h3>Details About Your Data!!</h3>
-<button type="button" routerLink="/cse" >create</button>
+<button type="button" [routerLink]="['/cse']" >create</button>
 <!-- <div><a class="out" routerLink="/front">logout</a></div> -->
 <table class ="design">
     <tr>
@@ -31,9 +31,10 @@
                         <td *ngIf="stu">{{stu.address.city}}</td> 
                         <td *ngIf="stu">{{stu.address.Pincode}}</td>
                         <td *ngIf="stu">{{stu.address.country}}</td>
-                        <button type="button" routerLink="/cse" >edit</button> 
-                        <button type="button" routerLink="/display" >view</button> 
-                        <button type="button" (click)="clear(array._id)"> delete</button> 
+                        
+                        <button type="button" [routerLink]="['/cse',array._id]" >edit</button> 
+                        <button type="button" [routerLink]="['/display',array._id]" >view</button> 
+                        <button type="button" (click)="clear(array._id) "> delete</button> 
                     </ng-container>
                     </tr>   
 </table>

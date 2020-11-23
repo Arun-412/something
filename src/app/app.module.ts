@@ -12,14 +12,15 @@ import { RestModule } from './rest/rest.module';
 import { DateService } from './date.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
+import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 const routes: Routes = [
   { path: '', redirectTo:'front' ,pathMatch:"full" },
     { path: 'front', component: FrontComponent },
     { path: 'task', component: TaskComponent },  
     { path: 'cse', component: CseComponent },
+    { path: 'cse/:id', component: CseComponent },
     { path: 'it', component: ItComponent },  
-    { path: 'display', component: DisplayComponent },
+    { path: 'display/:id', component: DisplayComponent },
     {path:'dept',  loadChildren:() => import('./dept/dept.module').then (a=>a.DeptModule)},
     {path:'rest',  loadChildren:() => import('./rest/rest.module').then (b=>b.RestModule)}         
 
@@ -32,6 +33,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(routes),

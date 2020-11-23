@@ -12,6 +12,8 @@ export class ItComponent implements OnInit {
 constructor(public service:DateService){}
 ddisplaythelist:any=[];
 clr;
+reload;
+strt;
   ngOnInit(): void {
    this.listapicall()
   }
@@ -27,7 +29,9 @@ clr;
   }
   clear(array_id){
     this.service.delete(array_id).subscribe(res=>{})
+    this.listapicall()
   }
+  
 }
   
  

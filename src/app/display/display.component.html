@@ -1,3 +1,15 @@
 <router-outlet></router-outlet>
 <p>this is your data</p>
-<button type="button" routerLink="/it">back</button>
+<button type="button" routerLink="/it">back</button><br>
+<label>Register Number : <b>{{disply.Reg_No}}</b></label><br>
+<label *ngIf="disply.college">College Name : <b>{{disply.college.name}}</b></label><br>
+<label *ngIf="disply.college">Department Name :<b> {{disply.college.department}}</b></label><br>                   
+<ng-container *ngFor="let stu of disply.student">
+<label *ngIf="stu">FirstName :<b> {{stu.FirstName}}</b></label><br>
+<label *ngIf="stu">Last Name : <b>{{stu.LastName}}</b></label><br>
+<label *ngIf="stu">Date Of Birth :<b> {{stu.DOB}}</b></label><br> 
+<label *ngIf="stu">Address Line 1 : <b>{{stu.address.addressline1}}</b></label><br>
+<label *ngIf="stu">Address Line 2 :<b> {{stu.address.addressline2}}</b></label><br>
+<label *ngIf="stu">City :<b> {{stu.address.City}}</b></label><br>
+<label *ngIf="stu">Pincode :<b> {{stu.address.Pincode}}</b></label><br>
+<label *ngIf="stu">Country :<b> {{stu.address.country}}</b></label></ng-container><br>

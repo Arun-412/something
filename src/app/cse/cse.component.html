@@ -1,27 +1,43 @@
 <router-outlet></router-outlet>
 <h3>Please Create Your Data !!</h3>
-<form class="form" >
-<label><b>First Name</b></label>
-<input type="text"  id="fname"  placeholder="Enter Your First Name" required><br>
-<label><b>Last Name</b></label>
-<input type="text"  id="lname"  placeholder="Enter Your Last Name" required><br>
-<label><b>Date of birth</b></label>
-<input type="birthday" placeholder="Enter Your Date Of Birth" required><br>
-<p><b>Address</b></p>
-<label><b>Address line 1</b></label>
-<input type="text"  id="Addressline1"  placeholder="Enter Your Address" required><br>
-<label><b>Address line 2</b></label>
-<input type="text" placeholder="Enter Your Address" required><br>
-<label><b>City</b></label>
-<input type="text" id="p"  placeholder="Enter your city" required><br>
-    <label><b>country</b></label>
-    <input type="text"  id="Addressline1"  placeholder="Enter Your Address" required><br>
-    <label><b>pincode</b></label>
-    <input type="text" placeholder="Enter Your Address" required><br>
-    <p><b>college</b></p>
-    <label><b>department</b></label>
-    <input type="text" id="p"  placeholder="Enter your department" required><br>
-    <label><b>name</b></label>
-    <input type="text" id="p"  placeholder="Enter your college name " required><br>
-  <button type="button"  id="s" routerLink="/it" ><b>submit</b></button>       
-</form>
+<div>
+  <form [formGroup]="createdata" (ngSubmit)="onSubmit()">
+    <label><b>Register number</b></label>
+    <input type="number" placeholder="Enter Your Register Number" formControlName="Reg_No"><br>
+    <div formArrayName="student">
+      <p><b>Enter student details</b></p>
+      <ng-container *ngFor="let ccustom of stud.controls;let i=index">
+        <div [formGroupName]="i">
+        <label><b>First Name</b></label>
+          <input type="text" placeholder="Enter Your First Name" formControlName="FirstName"><br>
+          <label><b>Last Name</b></label>
+          <input type="text" placeholder="Enter Your Last Name" formControlName="LastNname"><br>
+          <label><b>Date of birth</b></label>
+          <input type="number" placeholder="Enter Your Date Of Birth" formControlName="DOB"><br>
+          <div formGroupName="address">
+            <p><b>Enter Student Address</b></p>
+            <label><b>Address line 1</b></label>
+            <input type="text" placeholder="Enter Your Address" formControlName="addressline1"><br>
+            <label><b>Address line 2</b></label>
+            <input type="text" placeholder="Enter Your Address" formControlName="addressline2"><br>
+            <label><b>City</b></label>
+            <input type="text" placeholder="Enter your city" formControlName="City"><br>
+            <label><b>country</b></label>
+            <input type="text" placeholder="Enter Your country" formControlName="country"><br>
+            <label><b>pincode</b></label>
+            <input type="text" placeholder="Enter Your pincode" formControlName="Pincode"><br>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div formGroupName="college">
+      <p><b>college</b></p>
+      <label><b>Enter college details</b></label>
+      <input type="text" placeholder="Enter your department" formControlName="department"><br>
+      <label><b>name</b></label>
+      <input type="text" placeholder="Enter your college name " formControlName="name"><br>
+      <button type="submit" [disabled]="!createdata.valid"><b>submit</b></button>
+    </div>
+
+  </form>
+</div>
